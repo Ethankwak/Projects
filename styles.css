@@ -19,6 +19,7 @@ body * {
     overflow: hidden;
     background-color: #963484;
     
+    display: flex;
 }
 
 .navbar a {
@@ -82,10 +83,33 @@ body * {
 
 .search {
     float: right;
-    padding: 2px;
-    border: none;
-    margin-top: 10px;
-    margin-right: 24px;
-    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 4px;
 }
 
+#queryDropdown,
+#SongInput,
+input[type="submit"] {
+  padding: 2px 10px;
+  font-size: 12px;
+  flex: 1;
+  min-width: 50px; 
+  
+}
+
+#queryDropdown {
+  width: 90px; 
+
+}
+
+#SongInput {
+  flex: 1; 
+ 
+}
+
+input[type="submit"] {
+  min-width: 50px; 
+    widthL
+}
