@@ -1,0 +1,304 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+// Define your custom colors
+$primary-color: #963484;
+$hover-color: #60afff;
+
+// Global styles
+body {
+  background-color: white;
+}
+
+.banner {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  height: 100vh;
+  max-width: 400px;
+
+  //header content
+  .header {
+    margin-top: 1em;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .dropdownContainer {
+      
+
+    .dropdown {
+      display: none; // Initially hide the dropdown on mobile
+      float: left;
+      overflow: hidden;
+      z-index: 2;
+      width: auto;
+      
+
+      .dropbutton {
+        font-size: 14px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 8px 6px;
+        background-color: $primary-color;
+        font-family: inherit;
+        margin: 0;
+        align-items: center;
+        
+        &:hover {
+          background-color: $hover-color;
+        }
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+
+        a {
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+
+          &:hover {
+            background-color: $hover-color;
+          }
+        }
+      }
+
+      &:hover .dropdown-content {
+        display: block;
+      }
+    }
+  }
+
+  
+    .hub {
+      position: relative;
+      margin-left: auto;
+
+    .profile {
+      justify-content: end;
+      height: 35px;
+      width: 35px;
+      color: $primary-color;
+      padding: 2px;
+      margin-right: auto;
+      display: inline-block;
+      cursor: pointer;
+      margin: auto;
+      display: relative;
+
+      &:hover {
+        color: $hover-color;
+      }
+    }
+
+    .profileContent {
+      position: absolute;
+      top: 100%;
+      right: -5%;
+      background-color: white;
+      box-shadow: 0 3px 10px rgba(0 0 0/0.4);
+      border-radius: 10%;
+      height: 250px;
+      width: 150px;
+      text-align: center;
+
+      .profileContent.closed {
+        display: none;
+      }
+
+      a {
+        text-decoration: none;
+        display: block;
+        padding: 8px;
+        cursor: pointer;
+      }
+    }
+
+
+    .menu,
+    .close-icon {
+      margin-left: 2px;
+      display: inline-block;
+      margin-left: auto;
+      @extend .profile;
+      height: 50px;
+      width: 50px;
+      cursor: pointer;
+      position:relative;
+    }
+
+    .menu {
+      margin-left: 2px;
+      display: inline-block;
+      height: 50px;
+      width: 50px;
+      z-index: 2;
+    }
+
+    .close-icon {
+     cursor: pointer;
+     z-index: 3; 
+     
+    }
+
+  
+
+
+    
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .sidebar {
+      display: none;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.753);
+      
+
+      a {
+        font-size: 20px;
+        color: white;
+        display: block;
+      }
+    }
+
+    .sidebar.open {
+      display: flex !important;
+
+     
+    }
+  }
+  }
+
+//Navbar Content
+  .navbar {
+    overflow: hidden;
+    background-color: white;
+    border: 0.5px solid rgba(0 0 0/0.08);
+    margin-top: 1em;
+    border-radius: 5px;
+    transition: 0.3 ease all;
+    padding: 0 0.5rem;
+    width: 100%;
+    height: 40px;
+    box-shadow: 0 3px 10px rgba(0 0 0/0.1);
+   
+    
+    .search {
+      align-items: center;
+      width: 100%;
+      margin: 0 auto;
+      overflow: hidden;
+      max-width: 1920px;
+      display: inline-flex;
+      float: left;
+      text-align: center;
+      text-decoration: none;
+      height: 35px;
+
+      #searchBar {
+        @extend .search;
+      }
+
+      #queryDropdown,
+      #SearchInput,
+      #submitButton {
+        margin: 2px;
+        font-size: 0.6em;
+
+        &:not(:last-child) {
+          border-right: 0.5px solid rgba(0 0 0/0.25);
+          
+        }
+      }
+
+      #queryDropdown {
+        min-width: 30px;
+        min-height: 25px;
+        max-width: 30%;
+        float: left;
+
+        &:focus {
+          outline: none;
+        }
+        
+      }
+
+      #SearchInput {
+        flex-grow: 1;
+        min-width: 50%;
+        max-width: 90%; // Adjust the max-width as needed
+        min-height: 25px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      #submitButton {
+        text-align: center;
+        align-items: center;
+        bottom: 25px;
+        color: $primary-color;
+        margin-left: auto;
+
+        svg {
+          height: 20px;
+          width: 20px;
+          float: right;
+          margin-left: auto;
+          justify-content: end;
+
+          &:hover {
+            color: $hover-color;
+          }
+        }
+      }
+    }
+
+    // Media query for larger screens (min-width: 744px)
+  }
+}
+
+@media screen and (min-width: 744px) {
+  .banner {
+    width: 50%;
+    margin-left: 25%;
+    max-width: none;
+
+    .header .dropdownContainer .dropdown {
+      display: block; // Show the dropdown on larger screens
+
+    }
+
+    .search {
+      flex-direction: row; // Restore flex direction for larger screens
+
+      #queryDropdown {
+        min-width: 13%;
+        width: 8%;
+      }
+    }
+  }
+}

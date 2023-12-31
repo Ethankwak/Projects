@@ -1,0 +1,103 @@
+<!DOCTYPE HTML> 
+<html lang="en"> 
+<head> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Music review webpage</title>
+    <link href="styles.css" rel="stylesheet"/> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;600&display=swap" rel="stylesheet">
+</head> 
+
+   <body> 
+    <div class="banner">
+        <div class="navbar">
+          <div class="search"> <!-- container for search bar elements -->
+            <form method="post" onsubmit="handleSubmit(event)">
+              <select id="queryDropdown" name="queryDropdown" onchange="setSelectedOption(event)">
+                <option value="">All</option>
+                <option value="Songs">Songs</option>
+                <option value="Albums">Albums</option>
+                <option value="Artists">Artists</option>
+              </select>
+              <input type="text" id="SearchInput" name="queryInput" placeholder="Search" value="" onchange="setSearchInput(event)">
+              <button type="submit" name="submitQuery" id="submitButton" class="flex">
+                <i class="fi-check-circle"></i>
+              </button>
+            </form>
+          </div>
+      
+          <!-- Drop down content for table sizes and larger -->
+          <div class="dropdown">
+            <button class="dropbutton">Songs</button>
+            <div class="dropdown-content">
+              <a href="#">Top Songs</a>
+              <a href="#">Seasonal Songs</a>
+              <a href="#">Genres</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbutton">
+              Artists
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Top Streamed</a>
+              <a href="#">Genre Artists</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbutton">
+              Albums
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Top Albums</a>
+              <a href="#">Genre Albums</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbutton">
+              Industry
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Producers</a>
+              <a href="#">Labels</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbutton">
+              Community
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Forums</a>
+              <a href="#">Reviews</a>
+              <a href="#">Grousp</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbutton">
+              About
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">About Us</a>
+              <a href="#">What is ___</a>
+            </div>
+          </div>
+          <!-- Add more navigation elements here based on your design -->
+        </div>
+      </div>
+  </body> 
+
+<footer> 
+
+</footer> 
+</html> 
+
+ 
+
+ 
