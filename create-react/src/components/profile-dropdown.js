@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { CgProfile } from "react-icons/cg";
 
 const ProfileDropdown = () => {
-
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isLoggedIn, setLoggedIn] = useState(false); // Assume the user is not logged in initially
 
@@ -25,23 +24,26 @@ const ProfileDropdown = () => {
   const profileContent = `profileContent ${isDropdownOpen ? "open" : "closed"}`;
 
   return (
-    <>
-        <CgProfile className="profile" onClick={toggleDropdown}/>
-        {isDropdownOpen && (
-            <div className={`profileContent${isDropdownOpen ? " open" : "closed"}`}>
-                {isLoggedIn ? (
-                    <div onClick={handleLogout}>
-                        <a>Logout</a>
-                     </div>
-                ) : (
-                    <div onClick={handleLogin}>
-                        <a>Login</a>
-                    </div>
-                )}
+    <div className="profileContainer" onMouseEnter={toggleDropdown}
+    onMouseLeave={toggleDropdown}>
+      <CgProfile className="profile" />
+      {isDropdownOpen && (
+        <div className={`profileContent${isDropdownOpen ? " open" : "closed"}`}>
+          {isLoggedIn ? (
+            <div onClick={handleLogout}>
+              <a>Logout</a>
             </div>
-        )}
-    </>
-  )
-}
+          ) : (
+            <div onClick={handleLogin}>
+              <a>Login</a>
+              <a>Register</a>
+            </div>
+          )}
+        </div>
+      )}
 
-export default ProfileDropdown
+    </div>
+  );
+};
+
+export default ProfileDropdown;

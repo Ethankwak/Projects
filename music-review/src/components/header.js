@@ -1,24 +1,23 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import { BiMenuAltRight } from "react-icons/bi";
-import { CgProfile } from "react-icons/cg";
 import { VscChromeClose } from "react-icons/vsc";
-import ProfileDropdown from "./ProfileDropdown";
+import ProfileDropdown from "./profile-dropdown";
 
 const Header = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    }
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
-    const closeSidebar = () => {
-        setMenuOpen(false);
-      };
-      
-    
+  const closeSidebar = () => {
+    setMenuOpen(false);
+  };
 
   return (
-    <div className="header">
+    <header>
+      <h1 className="siteLogo">MusiList</h1>
       <div className="dropdownContainer">
         <div className="dropdown">
           <button className="dropbutton">Songs</button>
@@ -79,26 +78,25 @@ const Header = () => {
             <a href="#">What is ___</a>
           </div>
         </div>
-        </div>
+      </div>
 
-        {/*Menu and Profile Button Functionality*/}
-        <div className="hub">
-          <ProfileDropdown />
-         
-          {menuOpen ? (
-            <VscChromeClose className="menu close-icon" onClick={closeSidebar}/>
-          ) : (
-            <BiMenuAltRight className="menu" onClick={toggleMenu} />
-          )}
+      {/*Menu and Profile Button Functionality*/}
+      <div className="hub">
+        <ProfileDropdown />
 
-            <div className={`sidebar${menuOpen ? " open" : ""}`}>
-             <a href="#">Link 1</a>
-             <a href="#">Link 2</a>
-             <a href="#">Link 3</a>
-           </div>
+        {menuOpen ? (
+          <VscChromeClose className="menu close-icon" onClick={closeSidebar} />
+        ) : (
+          <BiMenuAltRight className="menu" onClick={toggleMenu} />
+        )}
+
+        <div className={`sidebar${menuOpen ? " open" : ""}`}>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
         </div>
       </div>
-    
+    </header>
   );
 };
 

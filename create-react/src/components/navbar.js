@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FiCheckCircle } from "react-icons/fi";
+import { FaCheck } from "react-icons/fa";
 
 
 const Navbar = () => {
@@ -34,7 +34,7 @@ const Navbar = () => {
             />
           
             <button type="submit" name="submitQuery" id="submitButton" className="flex"> 
-             <FiCheckCircle />
+            <FaCheck />
             </button>
             
           </form>

@@ -1,0 +1,60 @@
+{
+  "team": [
+    {
+      "name": "Ed",
+      "attributes": {
+        "intelligence": 6,
+        "strength": 8,
+        "endurance": 3,
+        "charisma": 7
+      }
+    },
+    {
+      "name": "Eli",
+      "attributes": {
+        "intelligence": 9,
+        "strength": 6,
+        "endurance": 1,
+        "charisma": 6
+      }
+    },
+    {
+      "name": "Ezra",
+      "attributes": {
+        "intelligence": 7,
+        "strength": 6,
+        "endurance": 4,
+        "charisma": 8
+      }
+    }
+  ],
+  "applicants": [
+    {
+      "name": "Bob",
+      "attributes": {
+        "intelligence": 8,
+        "strength": 8,
+        "endurance": 2,
+        "charisma": 4
+      }
+    },
+    {
+      "name": "Ben",
+      "attributes": {
+        "intelligence": 5,
+        "strength": 9,
+        "endurance": 8,
+        "charisma": 5
+      }
+    },
+    {
+      "name": "Billy",
+      "attributes": {
+        "intelligence": 3,
+        "strength": 3,
+        "endurance": 8,
+        "charisma": 10
+      }
+    }
+  ]
+}
