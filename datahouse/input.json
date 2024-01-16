@@ -34,7 +34,7 @@
       "attributes": {
         "intelligence": 8,
         "strength": 8,
-        "endurance": 2,
+        "endurance": 7,
         "charisma": 4
       }
     },
@@ -52,7 +52,7 @@
       "attributes": {
         "intelligence": 3,
         "strength": 3,
-        "endurance": 8,
+        "endurance": 7,
         "charisma": 10
       }
     }
